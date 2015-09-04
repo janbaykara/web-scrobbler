@@ -83,7 +83,7 @@ Connector.getPlaylist = function() {
 
 	// It's probably not a playlist if it's just a few timestamps...
 	// E.g. "Omg lol at 01:05 and 02:45!11!1"
-	if(playlist.length < 3) { return; }
+	if(playlist.length < 3) { return null; }
 
 	playlist = _.sortBy(playlist, function(track) {
 		return track.startTime;
@@ -93,7 +93,7 @@ Connector.getPlaylist = function() {
 };
 
 function parsePlaylist(potentialTracks) {
-	console.log(potentialTracks);
+	//console.log(potentialTracks);
 	var potentialPlaylist = [];
 
 	_.each(potentialTracks, function(maybeTrack) {
@@ -148,6 +148,7 @@ function cleanseArtist(artist) {
 	if(typeof artist === 'undefined' | artist === null) { return; }
 
 	artist = artist.replace(/^\s+|\s+$/g,'');
+	artist = artist.replace(/\s+/g, ' ');
 
 	return artist;
 }
@@ -156,6 +157,7 @@ function cleanseTrack(track) {
 	if(typeof track === 'undefined' | track === null) { return; }
 
 	track = track.replace(/^\s+|\s+$/g,'');
+	track = track.replace(/\s+/g, ' ');
 
 	// Strip crap
 	track = track.replace(/\s*\*+\s?\S+\s?\*+$/, ''); // **NEW**
