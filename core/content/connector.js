@@ -310,7 +310,7 @@ var BaseConnector = window.BaseConnector || function () {
 			/**
 			 * This media is a collection of consecutive tracks.
 			*/
-			
+
 			// (assuming that only track title data will be available...)
 			// Make use of Artist - Album Name convention, as a default fallback
 			artistTrack = this.getArtistTrack();
@@ -320,7 +320,7 @@ var BaseConnector = window.BaseConnector || function () {
 			if ( (newAlbum === null || typeof newAlbum === 'undefined') ) {
 				newAlbum = artistTrack.track || newAlbum; // Format will probably be Artist - Album Name, so hijack it.
 			}
-			
+
 			// Find out which track is playing
 			var newPlaylistTrack = this.playlistIncrementCheck();
 			if(newPlaylistTrack) {

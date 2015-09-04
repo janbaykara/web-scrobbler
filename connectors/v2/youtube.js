@@ -149,7 +149,7 @@ function cleanseArtist(artist) {
 
 	artist = artist.replace(/^\s+|\s+$/g,'');
 	artist = artist.replace(/\s+/g, ' ');
-	
+
 	return artist;
 }
 
@@ -157,8 +157,8 @@ function cleanseTrack(track) {
 	if(typeof track === 'undefined' | track === null) { return; }
 
 	track = track.replace(/^\s+|\s+$/g,'');
-	track = track.replace(/\s+/g, ' '); 
-	
+	track = track.replace(/\s+/g, ' ');
+
 	// Strip crap
 	track = track.replace(/\s*\*+\s?\S+\s?\*+$/, ''); // **NEW**
 	track = track.replace(/\s*\[[^\]]+\]$/, ''); // [whatever]
