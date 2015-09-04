@@ -93,7 +93,7 @@ Connector.getPlaylist = function() {
 };
 
 function parsePlaylist(potentialTracks) {
-	console.log(potentialTracks);
+	//console.log(potentialTracks);
 	var potentialPlaylist = [];
 
 	_.each(potentialTracks, function(maybeTrack) {
