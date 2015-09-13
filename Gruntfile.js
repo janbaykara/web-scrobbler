@@ -53,15 +53,27 @@ module.exports = function(grunt) {
 			strict: {
 				src: [cssFiles]
 			}
+		},
+		jsdoc : {
+			dist : {
+				src: [
+					'core/background/**/*'
+				],
+				options: {
+					destination: 'docs',
+					force: true,
+					ignoreWarnings: true
+				}
+			}
 		}
 	});
-
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-compress');
 	grunt.loadNpmTasks('grunt-lintspaces');
 	grunt.loadNpmTasks('grunt-jsonlint');
 	grunt.loadNpmTasks('grunt-contrib-csslint');
+	grunt.loadNpmTasks('grunt-jsdoc');
 	grunt.registerTask('lint', ['jshint', 'csslint']);
-	grunt.registerTask('default', ['lint', 'lintspaces', 'jsonlint']);
+	grunt.registerTask('default', ['lint', 'lintspaces', 'jsonlint', 'jsdoc']);
 };

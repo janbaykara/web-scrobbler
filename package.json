@@ -14,6 +14,8 @@
     "grunt-contrib-compress": "~0.9.1",
     "grunt-contrib-csslint": "^0.4.0",
     "grunt-contrib-jshint": "~0.10.0",
+    "grunt-jsdoc": "^0.6.8",
+    "grunt-jsdox": "^0.1.7",
     "grunt-jsonlint": "^1.0.4",
     "grunt-lintspaces": "^0.5.1",
     "jshint": "~2.5.1",

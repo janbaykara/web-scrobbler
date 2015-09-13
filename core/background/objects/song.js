@@ -2,12 +2,14 @@
 
 /**
  * Song object
+ * @module Song
  */
-define([
+define('Song', [
 	'wrappers/can'
 ], function(can) {
 	/**
 	 * @constructor
+	 * @alias module:Song
 	 */
 	return function(parsedData) {
 		/**
@@ -78,6 +80,7 @@ define([
 
 		/**
 		 * Helper method
+		 * @method
 		 */
 		song.getTrack = function() {
 			return this.processed.track || this.parsed.track || null;

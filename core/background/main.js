@@ -7,8 +7,9 @@
  * - creates controllers for each recognized tab
  * - sets up all chrome.* listeners, which are forwarded controllers if needed
  * - checks auth status on run (browser start or extension enabling) and prompts for login if needed
+ * @module Main
  */
-require([
+require('Main',[
 	'legacy/scrobbler',
 	'services/background-ga',
 	'services/lastfm',
