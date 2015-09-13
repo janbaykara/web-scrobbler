@@ -21,7 +21,8 @@ module.exports = function (driver, connector, next) {
 			{ url: 'https://youtube.com/watch?v=RW3li2XWgoM',	 comment: 'strange jumble of number, timestamp, track name' },
 			{ url: 'https://youtube.com/watch?v=i5mQ_m5zm6U',	 comment: 'PRESERVE lots of numbers all over the place' },
 			{ url: 'https://youtube.com/watch?v=4Xg1usuLpsM',	 comment: 'Gets playlist from a comment' },
-			{ url: 'https://www.youtube.com/watch?v=9-NFosnfd2c', comment: 'Removes ridiculous other duration timestamps' }
+			{ url: 'https://www.youtube.com/watch?v=9-NFosnfd2c', comment: 'Removes ridiculous other duration timestamps' },
+			{ url: 'https://www.youtube.com/watch?v=o-3Gd4_w5RQ', comment: 'preserves leading numbers in track titles' }
 		], function(playlistVideo, nextPlaylist) {
 			describe('Video: '+playlistVideo.url, function() {
 				before('should load '+playlistVideo.url, function(done) {
